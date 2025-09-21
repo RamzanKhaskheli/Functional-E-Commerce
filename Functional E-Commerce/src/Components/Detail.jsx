@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 function Detail() {
 
-  const Data = useContext(productContext)
+  const [Data] = useContext(productContext)
   const [save, setSave] = useState()
    const { id } = useParams();
   const Product = Data.find(pro => pro.id === parseInt(id));

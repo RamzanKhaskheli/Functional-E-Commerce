@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 import Context, { productContext } from '../../utils/Context/context'
 
 function Home() {
-    const Data = useContext(productContext)
-  
+    const [Data] = useContext(productContext);
+    
+    
     
   return (
     <>
