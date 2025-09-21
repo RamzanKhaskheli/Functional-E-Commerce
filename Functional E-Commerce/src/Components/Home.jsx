@@ -9,20 +9,19 @@ function Home() {
     
   return (
     <>
-    <Nav/>
-   <div className='h-full w-[85%] p-10 pt-[5%] flex flex-wrap gap-5  overflow-y-auto'>
+    {Data ? (<><Nav/> <div className='h-[97vh] w-[85%] p-10 pt-[1%] flex  flex-wrap gap-5 overflow-x-auto'>
 
     {Data.map((p)=>{
 
-        return   <div key={p.id} className="w-[18%] h-[30vh] shadow rounded p-4 flex flex-col items-center">
-     <Link to="/productDetail">
+        return   <div key={p.id} className="w-[18%] h-[35vh] shadow rounded p-4 flex flex-col items-center">
+     <Link to={`/productDetail/${p.id}`}>
       <img
         src={p.image}
         alt="Product"
         className="w-40 h-40 object-contain m-auto mb-4 hover:scale-110"
         />
       <p className="text-center text-gray-700 font-medium">
-        Lorem ipsum dolor sit amet.
+        {p.title}
       </p>
         </Link>
     
@@ -36,8 +35,11 @@ function Home() {
 
 
     
-    </div>
-        </>
+    </div></>) : <h1>Loading</h1>
+    
+    }
+    </>
+      
   )
 }
 

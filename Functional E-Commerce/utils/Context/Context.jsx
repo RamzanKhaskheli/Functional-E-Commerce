@@ -6,10 +6,10 @@ export const productContext = createContext();
 const Context = (props) => {
 
     const getApi = "https://fakestoreapi.com/products";
-    const [product, setProduct] = useState([])
+    const [product, setProduct] = useState([null])
 
-    const getProduct = ()=>{
-        {axios.get(getApi).then((res)=>{
+    const getProduct =  ()=>{
+        { axios.get(getApi).then((res)=>{
             setProduct(res.data)
         }).catch((err)=>{console.log(err)})}
     }

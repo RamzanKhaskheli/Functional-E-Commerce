@@ -8,11 +8,11 @@ function App() {
  
 
   return (
-    <div className='w-screen h-screen flex'>
+    <div className='w-100vw h-100vh flex'>
 
       <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/productDetail' element={<Detail/>}/>
+            <Route path='/productDetail/:id' element={<Detail/>}/>
             
           
         </Routes>

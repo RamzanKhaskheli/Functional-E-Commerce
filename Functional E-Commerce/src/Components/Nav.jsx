@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { productContext } from '../../utils/Context/context'
 
 function Nav() {
+
+    const product = useContext(productContext)
+    console.log(product)
+
+    let distinctCategory = product && product.reduce((acc,cv)=>[...acc,cv.category]);
+    distinctCategory = [...new Set(distinctCategory)];
+    console.log(distinctCategory);
+
   return (
-     <div className="w-[15%] h-full p-4 bg-white shadow ">
+     <div className="w-[15%] h-[97vh] p-4 bg-white shadow ">
       <button className="w-full mb-6 px-4 py-2 text-blue-500 border border-blue-300 rounded-lg hover:bg-blue-50">
         Add New Product
       </button>
