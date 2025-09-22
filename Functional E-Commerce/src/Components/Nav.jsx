@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { productContext } from '../../utils/Context/context'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Nav() {
 
-    const [product] = useContext(productContext)
+    const [product] = useContext(productContext);
+   
 
     // console.log(product)
     let distinctCategory = product && product.reduce((acc,cv)=>[...acc,cv.category],[]);
