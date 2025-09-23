@@ -61,7 +61,7 @@ function Home() {
 
 
     
-    </div></>) : <h1>Loading</h1>
+    </div></>) : <h1 className='text-5xl text-bold flex items-center justify-center w-full h-screen'>Loading...</h1>
     
     }
     </>
